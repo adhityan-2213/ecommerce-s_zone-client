@@ -13,7 +13,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://ecommerce-s-zone-server-ga1x.vercel.app/',
+        target: 'https://ecommerce-s-zone-server1.vercel.app/',
         changeOrigin: true,
         secure: false,
       },

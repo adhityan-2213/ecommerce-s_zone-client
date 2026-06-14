@@ -13,7 +13,7 @@ export const createNewOrder = createAsyncThunk(
   "/order/createNewOrder",
   async (orderData) => {
     const response = await axios.post(
-      "https://ecommerce-s-zone-server-ga1x.vercel.app/api/shop/order/create",
+      "https://ecommerce-s-zone-server1.vercel.app/api/shop/order/create",
       orderData
     );
 
@@ -25,7 +25,7 @@ export const capturePayment = createAsyncThunk(
   "/order/capturePayment",
   async ({ paymentId, payerId, orderId }) => {
     const response = await axios.post(
-      "https://ecommerce-s-zone-server-ga1x.vercel.app/api/shop/order/capture",
+      "https://ecommerce-s-zone-server1.vercel.app/api/shop/order/capture",
       {
         paymentId,
         payerId,
@@ -41,7 +41,7 @@ export const getAllOrdersByUserId = createAsyncThunk(
   "/order/getAllOrdersByUserId",
   async (userId) => {
     const response = await axios.get(
-      `https://ecommerce-s-zone-server-ga1x.vercel.app/api/shop/order/list/${userId}`
+      `https://ecommerce-s-zone-server1.vercel.app/api/shop/order/list/${userId}`
     );
 
     return response.data;
@@ -52,7 +52,7 @@ export const getOrderDetails = createAsyncThunk(
   "/order/getOrderDetails",
   async (id) => {
     const response = await axios.get(
-      `https://ecommerce-s-zone-server-ga1x.vercel.app/api/shop/order/details/${id}`
+      `https://ecommerce-s-zone-server1.vercel.app/api/shop/order/details/${id}`
     );
 
     return response.data;
